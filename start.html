@@ -9,103 +9,116 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>HTML Lesson</title>
   </head>
-  <body> 
-    <style>
+  <style>
+    input{
+      margin: 2px;          
+      background-color: rgb(239, 239, 239);          
+    }
 
-      body{
-        font-family: Arial, Helvetica, sans-serif;
-        
-      }
+    label{     
+      padding-right: 10px;
+      padding-left: 10px;
+      font-size: 13px;
+      font-family: Arial, Helvetica, sans-serif;     
+    }
 
-      table{
-        border: 2px solid black;
-        border-collapse: collapse ;
-       
-      }    
-
-      th{
-        border-bottom: 1px solid black;       
-        padding-top: 5px;
-        font-size: 11px;
-                
-      }    
-
-      col{
-        background-color: rgb(181, 243, 243);
-      }
-
-      caption{
-
-        padding-bottom:10px;
-        padding-top: 2px;
-        font-size: 16px;
-        font-weight: bold;
-        font-variant: small-caps;
-
-      }
-      #head {
-        background-color: rgb(221, 221, 221);
-        border: 2px solid black;
-         
-      }
-      #head th{
-        font-size: 13px;
-        font-variant: small-caps;
-        border: 1px groove black;
-        padding-right: 5px;
-        padding-left: 5px;
-        
-      }
-      #tot  {
-        background-color: rgb(221, 221, 221);
-      }
-      #tot .row_outflows {
-        background-color: rgb(252, 166, 166);
-      }
-      #tot .row_entries {
-        background-color: rgb(149, 255, 148);
-      }
-    </style>  
-  <table>
-    <colgroup>
-      <col span="1">
-    </colgroup>
-   <caption>entries and outflows</caption>
-
-     <thead>
-      <tr id="head">
-        <th>month</th> 
-        <th>cash entries</th>
-        <th>cash outflows</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <th>Jan</th>
-        <th>10</th>
-        <th>7</th>
-      </tr>
-      <tr>
-        <th>Feb</th>
-        <th>20</th>
-        <th>50</th>
-      </tr>
-      <tr>
-        <th>Mar</th>
-        <th>12</th>
-        <th>8</th>
-      </tr>
-    </tbody>
+    legend {
+      font-size: larger;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    button{ 
+      align-content: center;  
+      width: 200px;
+      align-content: center;
+    }
+    #pro_plan{
+      text-decoration-line: underline;
+      text-decoration-color:red ;
+      
+    }
   
-    <tfoot>
-      <tr id="tot">
-        <th>TOT</th>
-        <th class="row_entries"> 42</th>
-        <th class="row_outflows"> 65</th>
-      </tr>
-    </tfoot>
-  </table>
-  <p><u><em>We're broke!</em></u></p>
-  </body>
+    #form_box{
+     width: fit-content;
+     
+    }
+
+    #credit{
+      width: fit-content;
+    }
+    
+  </style>
+  <body> 
+  <div id="form_box">
+    <fieldset id="registration_form">
+     <br>
+     <legend>Registration Form</legend>
+      <form method="get" action="">
+       <div>
+        <label for="email">Email: <abbr title="required">*</abbr> </label>
+        <input type="email" name="email" placeholder="Insert a valid email" required>
+        <label for="password">Password: <abbr title="required">*</abbr> </label>
+        <input type="password" name="password" placeholder="Password" minlength="6" required>   
+       </div>
+       <div>      
+        <label for="name">Name:<abbr title="required">*</abbr></label>
+        <input type="text" name="name" placeholder="Name" required>
+        <label for="lastname">Lastname: <abbr title="required">*</abbr> </label>
+        <input type="text" name="lastname" placeholder="Lastname" required >  
+       </div> 
+    <br>
+       <div>  
+        <label for="date">Date of Birth: <abbr title="required">*</abbr></label>
+        <input type="date" name="date" required>
+        <label for="telephone">Telephone number:</label>
+        <input type="tel" name="telephone" placeholder="Insert your telephone" >
+       </div>
+    <br>
+    <fieldset>
+     <legend>Select your plan:</legend> 
+       <div>
+        <input type="radio" id="free" class="radio" name="free" value="free">
+        <label for="free">Free Plan</label>
+       </div>
+       <div>
+        <input type="radio" id="pro" class="radio" name="pro" value="pro" checked>
+        <label for="pro" id="pro_plan">Pro Plan 9.99$/month</label>
+       </div>
+       <div>
+        <input type="radio" id="premium" class="radio" name="premium" value="premium">
+        <label for="premium">Premium Plan 14.99$/month</label>
+       </div>
+    </fieldset> 
+     <br>      
+    <fieldset>
+     <legend>Payment method:</legend>
+     <div>
+      <label for="credit_card">Credit card number:<abbr title="required">*</abbr> </label>
+      <input type="text" id="credit" name="credit_card" placeholder="0000 0000 0000 0000" maxlength="16" required> 
+      <label for="cvc">CVC:<abbr title="required">*</abbr> </label>
+      <input type="text" name="cvc" placeholder="CVC" maxlength="3" required>      
+      <label for="experation_date">Experation date:<abbr title="required">*</abbr></label>
+      <input type="month" id="experation_date" name="experation_date" value="experation_date" required>
+     </div>
+    </fieldset> 
+     <br>
+    <fieldset>
+      <legend>Your billing address:</legend>
+      <div>
+       <label for="street">Street: </label>
+       <input type="text" name="street" id="street" placeholder="Street">      
+       <label for="postal_code">Postal code: </label>
+       <input type="text" name="postal_code" id="postal_code" placeholder="00000" maxlength="5">      
+       <label for="city">City: </label>
+       <input type="text" name="city" id="city" placeholder="City">      
+       <label for="country">Country: </label>
+       <input type="text" name="country" id="country" placeholder="Country">
+      </div>
+    </fieldset>
+      <br>
+      <br>
+    <button>Register</button>     
+   </form>  
+ </div>
+</body>
 </html>

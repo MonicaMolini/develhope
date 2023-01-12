@@ -1,11 +1,111 @@
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta charset="utf-8" /> 
-    <title>This is my first page</title>
-    <meta property=“og:title” content=“This is my first page” />
-    <meta property=“og:description” content=“This is my first proof” />
-    <meta property=“og:author” content=“Monica” />
-    <link rel="icon" href="favicon.ico">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML Lesson</title>
+  </head>
+  <body> 
+    <style>
+
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        
+      }
+
+      table{
+        border: 2px solid black;
+        border-collapse: collapse ;
+       
+      }    
+
+      th{
+        border-bottom: 1px solid black;       
+        padding-top: 5px;
+        font-size: 11px;
+                
+      }    
+
+      col{
+        background-color: rgb(181, 243, 243);
+      }
+
+      caption{
+
+        padding-bottom:10px;
+        padding-top: 2px;
+        font-size: 16px;
+        font-weight: bold;
+        font-variant: small-caps;
+
+      }
+      #head {
+        background-color: rgb(221, 221, 221);
+        border: 2px solid black;
+         
+      }
+      #head th{
+        font-size: 13px;
+        font-variant: small-caps;
+        border: 1px groove black;
+        padding-right: 5px;
+        padding-left: 5px;
+        
+      }
+      #tot  {
+        background-color: rgb(221, 221, 221);
+      }
+      #tot .row_outflows {
+        background-color: rgb(252, 166, 166);
+      }
+      #tot .row_entries {
+        background-color: rgb(149, 255, 148);
+      }
+    </style>  
+  <table>
+    <colgroup>
+      <col span="1">
+    </colgroup>
+   <caption>entries and outflows</caption>
+
+     <thead>
+      <tr id="head">
+        <th>month</th> 
+        <th>cash entries</th>
+        <th>cash outflows</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th>Jan</th>
+        <th>10</th>
+        <th>7</th>
+      </tr>
+      <tr>
+        <th>Feb</th>
+        <th>20</th>
+        <th>50</th>
+      </tr>
+      <tr>
+        <th>Mar</th>
+        <th>12</th>
+        <th>8</th>
+      </tr>
+    </tbody>
+  
+    <tfoot>
+      <tr id="tot">
+        <th>TOT</th>
+        <th class="row_entries"> 42</th>
+        <th class="row_outflows"> 65</th>
+      </tr>
+    </tfoot>
+  </table>
+  <p><u><em>We're broke!</em></u></p>
+  </body>
 </html>

@@ -32,12 +32,6 @@
       width: 200px;
       align-content: center;
     }
-    #pro_plan{
-      text-decoration-line: underline;
-      text-decoration-color:red ;
-      
-    }
-  
     #form_box{
      width: fit-content;
      
@@ -70,49 +64,42 @@
        <div>  
         <label for="date">Date of Birth: <abbr title="required">*</abbr></label>
         <input type="date" name="date" required>
-        <label for="telephone">Telephone number:</label>
-        <input type="tel" name="telephone" placeholder="Insert your telephone" >
+        <label for="telephone">Telephone number: <abbr title="required">*</abbr></label>
+        <input type="tel" name="telephone" placeholder="Insert your telephone" required >
        </div>
     <br>
     <fieldset>
-     <legend>Select your plan:</legend> 
-       <div>
-        <input type="radio" id="free" class="radio" name="free" value="free">
-        <label for="free">Free Plan</label>
-       </div>
-       <div>
-        <input type="radio" id="pro" class="radio" name="pro" value="pro" checked>
-        <label for="pro" id="pro_plan">Pro Plan 9.99$/month</label>
-       </div>
-       <div>
-        <input type="radio" id="premium" class="radio" name="premium" value="premium">
-        <label for="premium">Premium Plan 14.99$/month</label>
-       </div>
+     <legend>Select your plan:<abbr title="required">*</abbr></legend> 
+     <select name="plan" id="plans" required>      
+      <option value="free">Free Plan</option>
+      <option value="pro" selected>Pro Plan 9.99$/month</option>
+      <option value="premium">Premium Plan 14.99$/month</option>
+     </select>       
     </fieldset> 
      <br>      
     <fieldset>
-     <legend>Payment method:</legend>
+     <legend>Payment method: </legend>
      <div>
       <label for="credit_card">Credit card number:<abbr title="required">*</abbr> </label>
-      <input type="text" id="credit" name="credit_card" placeholder="0000 0000 0000 0000" maxlength="16" required> 
+      <input type="number" id="credit" name="credit_card" placeholder="0000 0000 0000 0000" maxlength="16" required> 
       <label for="cvc">CVC:<abbr title="required">*</abbr> </label>
-      <input type="text" name="cvc" placeholder="CVC" maxlength="3" required>      
+      <input type="number" name="cvc" placeholder="CVC" maxlength="3" required>      
       <label for="experation_date">Experation date:<abbr title="required">*</abbr></label>
       <input type="month" id="experation_date" name="experation_date" value="experation_date" required>
      </div>
     </fieldset> 
      <br>
     <fieldset>
-      <legend>Your billing address:</legend>
+      <legend>Your billing address:<abbr title="all required">*</abbr></legend>
       <div>
        <label for="street">Street: </label>
-       <input type="text" name="street" id="street" placeholder="Street">      
+       <input type="text" name="street" id="street" placeholder="Street" required>      
        <label for="postal_code">Postal code: </label>
-       <input type="text" name="postal_code" id="postal_code" placeholder="00000" maxlength="5">      
+       <input type="number" name="postal_code" id="postal_code" placeholder="00000" maxlength="5" required>      
        <label for="city">City: </label>
-       <input type="text" name="city" id="city" placeholder="City">      
+       <input type="text" name="city" id="city" placeholder="City" required>      
        <label for="country">Country: </label>
-       <input type="text" name="country" id="country" placeholder="Country">
+       <input type="text" name="country" id="country" placeholder="Country" required>
       </div>
     </fieldset>
       <br>

@@ -20,6 +20,20 @@
       padding-left: 15px;
       padding-right: 15px;
     }
+    #img_box{
+      position: relative;
+      width: 250px;
+      text-align: center;
+    }
+    #text_overlay{      
+     position: absolute;
+     font-size: 16px;
+     font-weight: bolder;
+     color: white;
+     top: 35%;
+     left: 32%;       
+    }
+
     .title{
       margin-top: 10px;
       margin-bottom: 0;
@@ -28,7 +42,7 @@
       margin-top: 5px;
     }
     img{
-      width: 250px;
+      width: 100%;
     }
     #links{
       padding-bottom: 15px;
@@ -44,28 +58,31 @@
   </style>
    
    <article id="card_container">  
-    <article id="main_section">
-     <img id="card_image" src="campione.jpg" alt="card_image">
+    <div id="main_section">
+     <div id="img_box">
+      <img id="card_image" src="campione.jpg" alt="card_image" >
+      <div id="text_overlay">Image cap</div>
+     </div>
      <h1 class="title">Card Title</h1>
      <p class="description">Some quik example text to build on the card title and make up the bulk of the card's content</p>
-    </article>
+    </div>
   <hr>
-    <article id="first_item">
+    <div id="first_item">
      <p>An item</p>
-    </article>
+    </div>
   <hr>
-    <article id="second_item">
+    <div id="second_item">
      <p>A second item</p>
-    </article>
+    </div>
   <hr>
-    <article id="third_item">
+    <div id="third_item">
      <p>A third item</p>    
-    </article>
+    </div>
   <hr>
-    <article id="links">
+    <div id="links">
      <a href="start.html">Card link</a>
      <a href="start.html">Another link</a>      
-    </article>     
+    </div>     
  </article>
 
 </html>

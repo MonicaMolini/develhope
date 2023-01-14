@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML Lesson</title>
+  </head>
+  
+  <header>
+    <style>
+      /* Navbar style */
+      body{
+        margin: auto;      
+      }
+      nav{
+        margin: 0;  
+        padding: 0;   
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+      }
+      ol {
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        list-style-type: none;          
+        
+      }
+      form{
+        align-content: center;
+      }
+      #nav_box{
+        background-color: rgb(51, 51, 51);
+        margin: 0;
+        padding: 0;
+      }
+      nav #menu{
+        display: inline;      
+        box-sizing: content-box;
+      }
+      li{
+        font-weight: bold;
+        font-size: 16px;
+        float: left;      
+        padding: 15px;      
+        color: rgb(250, 250, 250);
+      }
+      #disabled:disabled {
+        font-weight: bold;
+        font-size: 13px;
+        border: 0;
+        background-color: transparent;
+        color: rgb(101, 103, 105);
+      }
+      #search{    
+        margin-left: 35px;
+        padding-top: 10px;
+       
+      }
+      #search_input{
+        display: inline;
+        border-radius: 5px;
+        height: 30px;
+        margin-top: 0;
+        margin-bottom: 0;
+  
+      }
+      #search_button{
+        height: 30px;
+        margin-left: 10px;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: rgb(63, 131, 87);
+        color: rgb(63, 131, 87);
+        background-color: transparent;
+      }
+      #search_button:hover{     
+        border-color: rgb(250, 250, 250);
+        color: rgb(250, 250, 250);
+        
+      }
+      #dropdown{
+        font-weight: bold;
+        font-size: 13px;
+        border: 0;
+        color: rgb(153, 155, 157);
+        background-color: transparent;
+      }
+      option {
+      font-weight: normal;
+      display: block;
+      white-space:nowrap;
+      min-height: 1.2em;
+      padding: 0px 2px 1px;    
+      background-color: rgb(51, 51, 51);
+      }
+      #dropdown:hover {
+        color: rgb(250, 250, 250);
+      }
+      a:hover{
+        color: rgb(250, 250, 250);
+      }    
+      a{
+        font-weight: bold ;
+        font-size: 13px;
+        text-decoration: none;
+        color: rgb(153, 155, 157);
+      }
+      #home{
+        color: rgb(250, 250, 250);
+      }
+    </style>
+
+    <nav id="menu" class="main">
+      <div id="nav_box">
+       <ol class="navbar">
+         <li>Navbar</li>
+         <li>
+           <a href="start.html" id="home"> Home</a>
+         </li>
+         <li>
+           <a href="https://www.google.it/"> Link</a>
+         </li>
+         <li> 
+           <select id="dropdown">          
+             <option value="Dropdown" selected><a href="https://www.google.it/"> Dropdown</a></option>
+             <option  value="Services"><a href="https://www.google.it/"> Services</a></option>
+             <option  value="About"><a href="https://www.google.it/">About</a></option>              
+           </select>
+         </li>
+         <li>
+          <a href="https://www.google.it/">
+           <input type="button" id="disabled" name="Disabled" value="Disabled" disabled>
+          </a>
+         </li>      
+         <li id="search">
+          <form action="">
+           <input id="search_input" type="text" placeholder="Search">
+           <button id="search_button">Search</button>
+          </form>
+         </li>
+       </ol>
+      </div>
+    </nav>
+  </header>
+
+  <body>
+    <style>
+      /* Body style */
+      body{
+        background-color: rgb(243, 243, 243);
+      }
+      #body_div{
+        background-color: rgb(0, 144, 144); 
+        height: 50px;
+      }
+      #body_h1{
+        padding-left: 250px; 
+        margin-left: 250px; 
+        margin-right: 250px; 
+        font-weight: bolder; 
+        font-family: Verdana, Geneva, Tahoma, sans-serif; 
+        font-style: oblique;
+      }
+
+    </style>
+
+    <div id="body_div"></div>
+    <h1 id="body_h1">Blog Page Test</h1>  
+  
+  <article>  
+    <style>
+      article{
+        background-image: url(laptop.png); 
+        background-size: cover; 
+        padding-left: 250px; 
+        margin-left: 250px; 
+        margin-right: 250px; 
+        height: 100%; 
+        background-repeat: repeat-y;
+        box-sizing: content-box;
+      }
+      #article_container{
+        width: 70%; 
+        background-color: rgba(255, 255, 255, 0.904); 
+        box-sizing:border-box ;
+        text-align:justify; 
+        padding-top: 50px; 
+        height: 100%;
+      }
+      img{
+        width: 50%; 
+        margin-left: 20px;
+      }
+      #blog_title, #blog_text{       
+        margin-left: 20px; 
+        margin-right: 20px;
+      }      
+
+    </style>
+    
+    <div id="article_container">
+      <img src="hands.png" alt="blog_img">
+      <h1 id="blog_title">This is a title</h1>
+      <p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <br>
+    </div>
+  </article>
+  </body>
+
+  <br>
+
+  <footer>
+  <style>
+    footer{
+      background-color: rgb(0, 144, 144); 
+      height: 250px;
+    }
+    #newsletter_box{
+      padding-top: 50px;     
+
+    }
+    fieldset{
+      color: rgb(2, 111, 102); 
+      border: 2px solid rgb(0, 138, 90);
+      background-color: rgba(240, 253, 246, 0.897); 
+      position: relative; 
+      left: 37%; 
+      width: 350px;
+    }
+    hr{
+      background-color: rgb(0, 138, 90); 
+      border:1 solid rgb(0, 138, 90);
+
+    }
+    #mail_input{
+      width: 250px;
+      background-color: transparent; 
+      border: 2px solid rgb(0, 138, 90);
+
+    }
+    #submit_mail{
+      background-color: transparent; 
+      border: 2px solid rgb(0, 138, 90); 
+      color: rgb(2, 111, 102);
+
+    }
+
+  </style>
+
+    <div id="newsletter_box" style="padding-top: 50px;"> 
+      <fieldset>
+      <form action="">
+      <h3>Subscribe Newsletter</h3>
+      <hr>
+      <input id="mail_input" type="email" placeholder="Insert your email" required>
+      <button id="submit_mail">Submit</button>
+      <br>      
+      <input type="checkbox" name="terms" value="terms" checked>
+      <label for="terms">Accept terms</label>
+    </fieldset>
+    </div>
+    </form>
+
+  </footer>
+
+</html>
